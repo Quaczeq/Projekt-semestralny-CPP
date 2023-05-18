@@ -1,5 +1,6 @@
-#include<iostream>
-#include "strzelec.h"
+#include <iostream>
+#include <string>
+#include "klasy.h"
 
 using namespace std;
 
