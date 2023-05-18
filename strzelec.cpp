@@ -31,9 +31,9 @@ void Strzelec::atakuj(Postac &cel) {
     }
 }
 
-void Strzelec::przyjmij_atak(int obrazenia) {
+void Strzelec::przyjmij_atak(double obrazenia) {
     cout << imie << " przyjal " << obrazenia << " obrazen" << endl;
-    hp -= obrazenia;
+    hp -= int(obrazenia);
 }
 
 void Strzelec::wypisz_statystyki() {
@@ -48,8 +48,24 @@ bool Strzelec::czy_zyje() {
     return hp > 0;
 }
 
+string Strzelec::podaj_imie() {
+    return imie;
+}
+
 void Strzelec::awansuj() {
     atak += 5;
     zasieg += 5;
     krytyczne += 0.1;
+}
+
+void pojedynek(Postac* cel, Postac* cel2) {
+    while (cel->czy_zyje() && cel2->czy_zyje()) {
+        cel->atakuj(*cel2);
+        cel2->atakuj(*cel);
+    }
+    if (cel->czy_zyje()) {
+        cout << cel->podaj_imie() << " wygral!" << endl;
+   } else {
+        cout << cel2->podaj_imie() << " wygral!" << endl;
+    }
 }

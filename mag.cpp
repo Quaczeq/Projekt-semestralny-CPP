@@ -44,9 +44,9 @@ void Mag::potezny_atak(Postac &cel) {
     }
 }
 
-void Mag::przyjmij_atak(int obrazenia) {
+void Mag::przyjmij_atak(double obrazenia) {
     cout << imie << " przyjal " << obrazenia << " obrazen" << endl;
-    hp -= obrazenia;
+    hp -= int(obrazenia);
 }
 
 void Mag::wypisz_statystyki() {
@@ -55,6 +55,10 @@ void Mag::wypisz_statystyki() {
     cout << "Atak: " << atak << endl;
     cout << "Mana: " << mana << endl;
     cout << "Moc umiejetnosci: " << moc_umiejetnosci << endl;
+}
+
+string Mag::podaj_imie() {
+    return imie;
 }
 
 bool Mag::czy_zyje() {
