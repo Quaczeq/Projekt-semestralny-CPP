@@ -64,8 +64,18 @@ void wczytaj_z_pliku_do_vectora(vector<Postac*> &v) {
     plik.close();
 }
 
-void usun_pliki() {
-    remove("strzelcy.txt");
-    remove("magowie.txt");
+void usun_pliki(vector<Postac*> &v) {
+    cout << "Jestes pewien? (y/n): ";
+    string wybor;
+    cin >> wybor;
+    if (wybor == "n") {
+        return;
+    } else {
+        cout << "Usuwam pliki strzelcy.txt i magowie.txt" << endl;
+        remove("strzelcy.txt");
+        remove("magowie.txt");
+        v.clear();
+        system("pause");
+    }
 }
 

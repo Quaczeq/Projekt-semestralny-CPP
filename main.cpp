@@ -49,9 +49,6 @@ int main()
             case '3':
                 system("cls");
                 usun_pliki();
-                postacie.clear();
-                cout << "Postacie zostaly usuniete!" << endl;
-                system("pause");
                 break;
             case '4':
                 system("cls");
