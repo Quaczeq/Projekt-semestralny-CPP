@@ -72,4 +72,4 @@ void pojedynek(Postac &p1, Postac &p2); //na razie w strzelec.cpp
 
 //METODY
 void wczytaj_z_pliku_do_vectora(vector<Postac*> &wektor); //wczytuje postacie z pliku strzelcy.txt i magowie.txt do wektora
-void usun_pliki(); //usuwa pliki strzelcy.txt i magowie.txt
+void usun_pliki(vector<Postac*> &wektor); //usuwa pliki strzelcy.txt i magowie.txt

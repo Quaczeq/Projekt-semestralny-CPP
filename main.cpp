@@ -48,7 +48,7 @@ int main()
                 break;
             case '3':
                 system("cls");
-                usun_pliki();
+                usun_pliki(postacie);
                 break;
             case '4':
                 system("cls");
