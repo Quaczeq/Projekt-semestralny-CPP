@@ -1,0 +1,54 @@
+<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>6</y><w>192</w><h>108</h></coordinates><panel_attributes>class Postac
+--
+--
+        virtual void stworz() = 0;
+        virtual void atakuj(Postac &amp;cel) = 0;
+        virtual void przyjmij_atak(double) = 0;
+        virtual void wypisz_statystyki() = 0;
+        virtual string podaj_imie() = 0;
+        virtual char podaj_typ() = 0;
+        virtual bool czy_zyje() = 0;
+        virtual void awansuj() = 0;
+        virtual void zapisz_do_pliku() = 0;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>162</y><w>192</w><h>198</h></coordinates><panel_attributes>class Mag : public Postac
+--
+        char typ = 'm';
+        string imie;
+        int hp;
+        int atak;
+        int mana;
+        double moc_umiejetnosci;
+--
+        Mag();
+        Mag(string, int, int, int, double);
+        ~Mag();
+        void stworz();
+        void atakuj(Postac &amp;cel);
+        void potezny_atak(Postac &amp;cel);
+        void przyjmij_atak(double obrazenia);
+        void wypisz_statystyki();
+        string podaj_imie();
+        char podaj_typ();
+        bool czy_zyje();
+        void awansuj();
+        void zapisz_do_pliku();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>216</x><y>162</y><w>192</w><h>198</h></coordinates><panel_attributes>class Strzelec : public Postac
+--
+        char typ = 'm';
+        string imie;
+        int hp;
+        int atak;
+        int mana;
+        double moc_umiejetnosci;
+--
+        Mag();
+        Mag(string, int, int, int, double);
+        ~Mag();
+        void stworz();
+        void atakuj(Postac &amp;cel);
+        void potezny_atak(Postac &amp;cel);
+        void przyjmij_atak(double obrazenia);
+        void wypisz_statystyki();
+        string podaj_imie();
+        char podaj_typ();
+        bool czy_zyje();
+        void awansuj();
+        void zapisz_do_pliku();</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>102</x><y>114</y><w>18</w><h>54</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>192</x><y>78</y><w>66</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>306</x><y>0</y><w>156</w><h>18</h></coordinates><panel_attributes>void pojedynek(Postac &amp;p1, Postac &amp;p2)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>306</x><y>30</y><w>210</w><h>18</h></coordinates><panel_attributes>void wczytaj_z_pliku_do_vectora(vector&lt;Postac*&gt; &amp;wektor)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>306</x><y>60</y><w>156</w><h>18</h></coordinates><panel_attributes>void usun_pliki(vector&lt;Postac*&gt; &amp;wektor)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>192</x><y>60</y><w>120</w><h>18</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>192</x><y>36</y><w>120</w><h>18</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>192</x><y>6</y><w>120</w><h>18</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>180;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>48</x><y>396</y><w>126</w><h>18</h></coordinates><panel_attributes>magowie.txt</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>228</x><y>396</y><w>126</w><h>18</h></coordinates><panel_attributes>strzelcy.txt</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>108</x><y>354</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>276</x><y>354</y><w>18</w><h>48</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element></diagram>
