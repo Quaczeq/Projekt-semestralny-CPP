@@ -20,6 +20,20 @@ Strzelec::Strzelec(string i, int h, int a, int z = 10, double k = 0.1) {
     this->krytyczne = k;
 }
 
+void Strzelec::stworz() {
+    cout << "Tworzenie strzelca" << endl;
+    cout << "Podaj imie: ";
+    cin >> imie;
+    cout << "Podaj HP: ";
+    cin >> hp;
+    cout << "Podaj atak: ";
+    cin >> atak;
+    cout << "Podaj zasieg (5 - 15): ";
+    cin >> zasieg;
+    cout << "Podaj szanse na trafienie krytyczne (0.1 - 0.9): ";
+    cin >> krytyczne;
+}
+
 void Strzelec::atakuj(Postac &cel) {
     if (cel.czy_zyje()) {
         cel.przyjmij_atak(atak);
@@ -41,7 +55,7 @@ void Strzelec::wypisz_statystyki() {
     cout << "HP: " << hp << endl;
     cout << "Atak: " << atak << endl;
     cout << "Zasieg: " << zasieg << endl;
-    cout << "Szansa na krytyczne: " << krytyczne << endl;
+    cout << "Szansa na krytyczne: " << krytyczne << endl << endl;
 }
 
 bool Strzelec::czy_zyje() {

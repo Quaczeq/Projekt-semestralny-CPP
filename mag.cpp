@@ -20,6 +20,20 @@ Mag::Mag(string i, int h, int a, int m = 100, double mu = 0.1) {
     this->moc_umiejetnosci = mu;
 }
 
+void Mag::stworz() {
+    cout << "Tworzenie maga" << endl;
+    cout << "Podaj imie: ";
+    cin >> imie;
+    cout << "Podaj hp: ";
+    cin >> hp;
+    cout << "Podaj atak: ";
+    cin >> atak;
+    cout << "Podaj mana: ";
+    cin >> mana;
+    cout << "Podaj moc umiejetnosci: ";
+    cin >> moc_umiejetnosci;
+}
+
 void Mag::atakuj(Postac &cel) {
     if (cel.czy_zyje()) {
         cel.przyjmij_atak(atak);
@@ -54,7 +68,7 @@ void Mag::wypisz_statystyki() {
     cout << "HP: " << hp << endl;
     cout << "Atak: " << atak << endl;
     cout << "Mana: " << mana << endl;
-    cout << "Moc umiejetnosci: " << moc_umiejetnosci << endl;
+    cout << "Moc umiejetnosci: " << moc_umiejetnosci << endl << endl;
 }
 
 string Mag::podaj_imie() {

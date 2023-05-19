@@ -5,6 +5,7 @@ using namespace std;
 
 class Postac {
     public:
+        virtual void stworz() = 0;
         virtual void atakuj(Postac &cel) = 0;
         virtual void przyjmij_atak(double) = 0;
         virtual void wypisz_statystyki() = 0;
@@ -16,6 +17,7 @@ class Strzelec : public Postac {
     public:
         Strzelec();
         Strzelec(string, int, int, int, double);
+        void stworz();
         void atakuj(Postac &cel);
         void przyjmij_atak(double obrazenia);
         void wypisz_statystyki();
@@ -34,6 +36,7 @@ class Mag : public Postac {
     public:
         Mag();
         Mag(string, int, int, int, double);
+        void stworz();
         void atakuj(Postac &cel);
         void potezny_atak(Postac &cel);
         void przyjmij_atak(double obrazenia);

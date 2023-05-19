@@ -2,28 +2,26 @@
 #include<iostream>
 #include "klasy.h"
 #include <string>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-    Strzelec p1("Wind", 147, 13, 11, 0.12);
-    Strzelec p2("Karm", 93, 21, 15, 0.09);
+    vector <Postac*> postacie;
 
-    Mag m1("Gandalf", 200, 2, 100, 1.4);
-    Mag m2("Saruman", 165, 3, 200, 2.3);
+    Postac* w = new Strzelec;
+    Postac* w2 = new Mag;
+    
+    w->stworz();
+    w2->stworz();
 
-    Postac* w;
-    Postac* w2;
-    w = &p1;
-    w2 = &m2;
+    postacie.push_back(w);
+    postacie.push_back(w2);
 
-    pojedynek(w, w2);
-
-    w->wypisz_statystyki();
-    cout << endl;
-    w2->wypisz_statystyki();
-
+    postacie[0]->wypisz_statystyki();
+    postacie[1]->wypisz_statystyki();
+    cout << "Wielkosc kontenera: " << postacie.size() << endl;
 
     system("pause");
 }
