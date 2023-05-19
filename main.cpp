@@ -13,7 +13,6 @@ int main()
 {
     vector <Postac*> postacie;
     wczytaj_z_pliku_do_vectora(postacie);
-    postacie[0]->wypisz_statystyki();
     do {
         system("cls");
         cout << "Witaj w grze!" << endl << endl;
